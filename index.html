@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gusti Adrianta - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Graphic Designer</p>
+            <h1>Lorem ipsum <span>dolor</span><br>sit amet</h1>
+        </div>
+    </div>
+</div>
+<!-------------about-------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu luctus odio, sed pretium odio. 
+                Fusce quis odio blandit, ornare urna sit amet, eleifend nisl. 
+                Maecenas ut molestie nunc, ut congue orci.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experiences')">Experiences</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Graphic Design</span><br>Designing a Roblox GFX</li>
+                        <li><span>Builder</span><br>Building in Roblox Studio</li>
+                        <li><span>Modeler</span><br>Make a model in Blender3D</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experiences">
+                    <ul>
+                        <li><span>2019 - now</span><br>Making Roblox GFX</li>
+                        <li><span>2021 - now</span><br>Builder, Modeler, and Designer in Miminers Studio</li>
+                        <li><span>2022 - now</span><br>Builder in Volumetric Studio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------portfolio--------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Roblox GFX</h3>
+                    <p>Make roblox gfx according to your request!</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Modelling</h3>
+                    <p>Create model assets, characters, for the game</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Builder</h3>
+                    <p>Create buildings, furniture, and more in Roblox Studio</p>
+                </div>
+            </div>
+        </div>
+        <a href="https://www.deviantart.com/gustifx/gallery" class="btn">See more</a>
+    </div>
+</div>
+
+<!----------contact------------>
+<div id="contact">
+    <div class="row">
+        <div class="container">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-brands fa-discord"></i> GustiFX#4349</p>
+            <p><i class="fa-solid fa-link"></i> bit.ly/eyexrbx</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/EyeXRBX"><i class="fa fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.instagram.com/gusti.fx/"><i class="fa fa-brands fa-square-instagram"></i></a>
+            </div>
+            </div>  
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+    
+</body>
+</html>
